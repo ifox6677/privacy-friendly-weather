@@ -1,0 +1,264 @@
+<resources>
+    <string name="app_name">天气</string>
+    <string name="app_name_long">隐私友好的天气</string>
+
+    <!-- ###DRAWER###-->
+    <string name="action_help">帮助</string>
+    <string name="action_about">关于</string>
+    <string name="action_settings">设置</string>
+    <string name="action_main">主页</string>
+    <string name="action_manage">管理位置</string>
+
+    <string name="navigation_drawer_open">打开导航抽屉</string>
+    <string name="navigation_drawer_close">关闭导航抽屉</string>
+
+    <!-- ###MAIN### -->
+    <string name="activity_main_icon_descriptor">与相应列表项当前天气条件匹配的图标。</string>
+    <string name="activity_main_location_not_found">服务器响应位置未找到。如果您确定该位置存在，请重试。</string>
+    <string name="activity_main_snackbar_undo_info">项目已删除</string>
+    <string name="activity_main_snackbar_undo_button">撤销</string>
+
+    <!-- ###TUTORIAL### -->
+    <string name="next">下一步</string>
+    <string name="skip">跳过</string>
+    <string name="okay">好的</string>
+    <string name="slide1_heading">欢迎!</string>
+    <string name="slide1_text">隐私友好的天气是一个检查您位置的当前天气和预报的应用程序。</string>
+    <string name="slide2_heading">如何使用</string>
+    <string name="slide2_text">您可以选择自己的位置，并获取关于当前天气的详细信息。您可以在您周围的半径内搜索最佳天气，或在主屏幕上放置小部件显示当前天气、三天预报或五天预报。</string>
+    <string name="slide3_heading" translatable="false">Github</string>
+    <string name="slide3_text">该应用的源代码可在GitHub上获取。有关进一步的说明，请查看关于页面。</string>
+
+    <!-- ###CARD_HEADINGs### -->
+    <string name="card_details_heading" translatable="false">详细信息</string>
+    <string name="card_week_heading">周</string>
+    <string name="card_day_heading">一天的过程</string>
+    <string name="card_sun_heading">太阳</string>
+
+    <!-- ###RADIUS_SEARCH### -->
+    <string name="radius_search_label">半径搜索</string>
+    <string name="radius_search_heading">在某个位置周围查找最佳天气</string>
+    <string name="radius_search_tv_heading">位置（搜索方块中心）</string>
+    <string name="radius_search_tv_edge_length">搜索方块的边长</string>
+    <string name="radius_search_tv_num_returns">要检索的位置数量</string>
+    <string name="radius_search_btn_search">搜索</string>
+
+    <!-- ###RADIUS_SEARCH_RESULT### -->
+    <string name="radius_search_result_label">搜索结果</string>
+
+    <!--###HELP###-->
+    <string name="help">帮助</string>
+    <string name="help_overview_heading">概述</string>
+    <string name="help_delete_items_title">删除位置</string>
+    <string name="help_delete_items_text">可以通过从左向右或从右向左滑动手势从概述列表中删除位置项。</string>
+    <string name="help_move_items_title">移动位置</string>
+    <string name="help_move_items_text">通过短暂触摸项目并向上或向下移动项目来更改概述列表中项目的位置。</string>
+    <string name="help_radius_search_title">半径搜索</string>
+    <string name="help_radius_search_text">半径搜索提供了一种机制，以检索给定位置周围天气最美丽和最温暖的位置。</string>
+    <string name="help_category">帮助类别</string>
+    <string name="help_privacy_heading">隐私信息</string>
+    <string name="help_permission_internet_heading">权限：连接网络</string>
+    <string name="help_permission_internet_description">在此类别中，"互联网"权限是必要的，因为天气数据通过向互联网服务器发出请求进行检索。如果没有此权限，则无法接收天气数据。</string>
+    <string name="help_permissions_heading">权限</string>
+    <string name="help_intro">欢迎来到帮助页面。此应用程序允许您添加位置，查看这些位置的当前天气以及天气预报。您还可以请求给定位置周围天气最好的位置。</string>
+
+    <!--###ABOUT###-->
+    <string name="about">关于</string>
+    <string name="version_number" translatable="false">版本</string>
+    <string name="about_author">作者： </string>
+    <string name="about_author_names" translatable="false">Patrick Mell, Karola Marky, Christopher Beckmann, Thomas Glaser, Noah Schlegel</string>
+    <string name="about_author_contributors">和贡献者。</string>
+    <string name="about_affiliation">附属关系</string>
+    <string name="privacy_friendly">此应用程序属于由SECUSO研究小组开发的隐私友好应用程序组。源代码根据GPLv3许可证发布。图像版权归SECUSO和Google Inc.所有。</string>
+    <string name="more_info">更多信息可以在以下网站找到：</string>
+    <string name="url" translatable="false"><a href="https://www.secuso.org/pfa">SECUSO-网站</a></string>
+    <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-weather-app">Github-仓库</a></string>
+
+    <!-- ###Settings### -->
+    <string name="title_activity_settings">设置</string>
+    <string name="pref_header_general">常规</string>
+    <string name="settings_title_units">单位</string>
+    <string name="settings_summary_temperature">设置用于显示温度的单位</string>
+    <string name="settings_title_temperature">温度</string>
+    <string name="settings_celsius">摄氏度</string>
+    <string name="settings_fahrenheit">华氏度</string>
+    <string name="settings_summary_distance">设置用于显示距离的单位</string>
+    <string name="settings_title_distance">距离</string>
+    <string name="settings_kilometers">公里</string>
+    <string name="settings_miles">英里</string>
+	
+    <string name="settings_title_API">API 密钥</string>
+    <string name="settings_description_API">隐私友好的天气从 openweathermap.org 的免费服务中获取数据。此服务限制为每天 1000 次调用。您必须免费注册自己的 API 密钥以获得 1000 次调用。</string>
+    <string name="settings_title_API_key">输入 API 密钥</string>
+    <string name="settings_API_key_default">未提供 API 密钥</string>
+    <string name="settings_title_API_key_reset">重置 API 密钥</string>
+
+    <string name="widgets_settings">小部件</string>
+    <string name="fivedaywidgetchoice">设置底部 5 天小部件的附加信息。</string>
+    <string name="fivedaywidget">5 天小部件</string>
+    <string name="threedaywidgetchoice_one">设置底部 3 天小部件的第一个附加信息。</string>
+    <string name="threedaywidget_first">3 天小部件 (1)</string>
+    <string name="threedaywidgetchoice_two">设置底部 3 天小部件的第二个附加信息。</string>
+    <string name="threedaywidget_second">3 天小部件 (2)</string>
+
+    <!-- ###CITY_WEATHER_ACTIVIY### -->
+    <string name="activity_city_weather_label">天气概览</string>
+    <string name="activity_city_weather_iv_description">适合天气类别的图像</string>
+    <string name="activity_city_weather_separator" translatable="false">&#160;|&#160;</string>
+    <string name="activity_city_weather_tv_category">天气：</string>
+    <string name="activity_city_weather_tv_humidity">湿度：</string>
+    <string name="activity_city_weather_tv_pressure">气压：</string>
+    <string name="activity_city_weather_tv_wind_speed">风速：</string>
+    <string name="activity_city_weather_tv_sunrise">日出时间：</string>
+    <string name="activity_city_weather_tv_sunset">日落时间：</string>
+    <string name="activity_city_weather_tv_details">今天的变化 ▼</string>
+    <string name="abbreviation_monday">周一</string>
+    <string name="abbreviation_tuesday">周二</string>
+    <string name="abbreviation_wednesday">周三</string>
+    <string name="abbreviation_thursday">周四</string>
+    <string name="abbreviation_friday">周五</string>
+    <string name="abbreviation_saturday">周六</string>
+    <string name="abbreviation_sunday">周日</string>
+    <string name="info_no_data_for_day">当前所选日期没有可用数据。</string>
+
+    <!-- ###CITY_WEATHER_DETAILS_ACTIVITY### -->
+    <string name="activity_city_weather_details_label">今天的天气</string>
+    <string name="activity_city_weather_details_tv_category">天气：</string>
+    <string name="activity_city_weather_details_tv_temperature">温度：</string>
+    <string name="activity_city_weather_details_tv_humidity">湿度：</string>
+    <string name="activity_city_weather_details_tv_pressure">气压：</string>
+    <string name="activity_city_weather_details_tv_wind_speed">风速：</string>
+    <string name="activity_city_weather_details_tv_rain_volume">降雨量：</string>
+    <string name="activity_city_weather_details_tv_rain_volume_na">无</string>
+
+    <!-- ###FORECAST_ACTIVITY### -->
+    <string name="activity_forecast_label">天气预报</string>
+
+    <!-- ###DIALOGS### -->
+    <string name="dialog_first_app_title">第一个位置</string>
+    <string name="dialog_first_app_start_message">现在添加您的第一个位置</string>
+    <string name="dialog_first_app_help_button">查看帮助</string>
+    <string name="dialog_first_app_close_button">好的</string>
+
+    <string name="progress_dialog_add_location_title">设置数据库…</string>
+    <string name="progress_dialog_add_location_msg">请稍等几秒钟</string>
+
+    <string name="dialog_add_label">输入要添加的位置：</string>
+    <string name="dialog_add_checkbox_save">永久保存此位置</string>
+    <string name="dialog_add_textedit_error">请输入有效的位置！</string>
+    <string name="dialog_add_added_successfully_template">位置已成功添加。</string>
+    <string name="dialog_add_no_city_found">未找到与您输入匹配的位置。建议从下拉列表中选择一个项目。</string>
+    <string name="dialog_add_too_many_cities_found">您的输入不唯一。建议从下拉列表中选择一个项目。</string>
+    <string name="dialog_add_already_added">此位置已在列表中</string>
+    <string name="dialog_add_close_button">关闭</string>
+    <string name="dialog_add_add_button">添加</string>
+    <string name="dialog_app_api_deprecation_title">应用弃用和 API 更改</string>
+    <string name="dialog_app_api_deprecation_description">2024 年 6 月 1 日，Open Weather 将停用其旧 API，因此旧的 API 密钥将不再可用。由于隐私友好的天气应用程序已弃用，我们将不调整任何 API 更改，应用程序将无法正常运行。
+
+        如果您希望继续使用此应用程序，请按照 <a href="https://openweathermap.org/appid">OpenWeather 指示</a> 获取自己的 API 密钥。
+        获得 API 密钥后，请在设置中进行设置。
+    </string>
+
+    <!-- ###WEATHER CATEGORIES### -->
+    <string name="weather_category_clear_sky">晴空</string>
+    <string name="weather_category_clouds">多云</string>
+    <string name="weather_category_scattered_clouds">散云</string>
+    <string name="weather_category_broken_clouds">破云</string>
+    <string name="weather_category_overcast_clouds">阴云</string>
+    <string name="weather_category_drizzle_rain">毛毛雨</string>
+    <string name="weather_category_light_rain">小雨</string>
+    <string name="weather_category_moderate_rain">中雨</string>
+    <string name="weather_category_rain">雨</string>
+    <string name="weather_category_thunderstorm">雷暴</string>
+    <string name="weather_category_snow">雪</string>
+    <string name="weather_category_mist">雾</string>
+    <string name="weather_category_showerrain">阵雨</string>
+    <string name="weather_category_showersnow">阵雪</string>
+
+    <!-- ###ERRORS### -->
+    <string name="convert_to_json_error">获取的天气数据格式不正确。</string>
+    <string name="insert_into_db_error">写入数据库时发生错误。</string>
+    <string name="settings_confirm_title_API_key_reset">重置 API 密钥</string>
+    <string name="settings_confirm_content_API_key_reset">您真的想重置为默认的 API 密钥吗？</string>
+    <string name="reset">重置</string>
+    <string name="appwidget_text">PFA - 天气</string>
+    <string name="configure">配置</string>
+    <string name="add_widget">添加小部件</string>
+    <string name="error_no_internet">您的设备未连接到互联网</string>
+    <string name="settings_interval_one" translatable="false">1 小时</string>
+    <string name="settings_interval_two" translatable="false">2 小时</string>
+    <string name="settings_interval_six" translatable="false">6 小时</string>
+    <string name="settings_interval_twelve" translatable="false">12 小时</string>
+    <string name="settings_interval_twentyfour" translatable="false">24 小时</string>
+    <string name="settings_intervals">时间间隔</string>
+    <string name="settings_update_interval">更新间隔</string>
+    <string name="settings_interval_summary">设置自动更新的时间间隔</string>
+
+    <!-- ##HELP## -->
+    <string name="help_whatis_answer">隐私友好的天气是一个检查您位置的当前天气和预报的应用程序。</string>
+    <string name="help_whatis">什么是隐私友好的天气？</string>
+    <string name="help_privacy_answer">隐私友好的天气使用“互联网”权限来获取天气数据。它不包括任何跟踪机制或广告。绑定服务作业和保持手机唤醒的两个权限是应用程序后台数据管理所需的。</string>
+    <string name="help_where_from">天气信息来自哪里？</string>
+    <string name="help_where_from_answer">信息来自 OpenWeatherMap 服务。如果您拥有自己的 OpenWeatherMap 密钥，请前往设置进行注册。</string>
+    <string name="error_fetch_forecast">更新预报时出错，请重试！</string>
+    <string name="error_fetch_cityList">更新城市列表时出错，请重试！</string>
+    <string name="error_add_city">添加城市时出错，请重试！</string>
+    <string name="error_radius_search">进行半径搜索时出错，请重试！</string>
+    <string name="card_error_heading">获取天气数据时出错</string>
+    <string name="card_error_content">请尝试更新！</string>
+    <string name="action_refresh">刷新</string>
+    <string name="activity_city_weather_no_city_selected">没有选择城市。要选择城市，请转到“管理位置”。</string>
+    <string name="RainViewer">雨雷达</string>
+    <string name="action_rainviewer">雨雷达查看器</string>
+    <string name="long_press_text">长按并拖动以排序。</string>
+    <string name="swipe_to_delete">滑动以删除</string>
+    <string name="rain_volume">降雨量</string>
+    <string name="wind">风</string>
+    <string name="humidity">湿度</string>
+    <string name="activity_city_weather_tv_wind_direction">风向：</string>
+    <string name="activity_city_weather_tv_rain_volume">降雨量：</string>
+    <string name="settings_title_forecastChoice">显示选项</string>
+    <string name="settings_summary_forecastChoice">选择 5 天 / 3 小时 和 2 天 / 1 小时 预报</string>
+    <string name="settings_forecastChoice">天气预报</string>
+    <string name="widget_needs_city">小部件仍需要 %1$s。请先删除该城市的所有小部件。</string>
+    <string name="rain60min_text">“接下来的 60 分钟：”</string>
+    <string name="explanation_owm_key">您似乎还没有使用<b>个人天气访问密钥</b>。公共密钥的连接限制已用完。请考虑迅速在 OpenWeatherMap 注册，这将为您提供自己的独立访问密钥，每天 1000 次调用。</string>
+    <string name="explanation_owm_key_on_start">您似乎还没有使用<b>个人天气访问密钥</b>。我们建议使用一个，因为公开可访问的调用有限。请考虑迅速在 OpenWeatherMap 注册，这将为您提供自己的独立访问密钥，每天 1000 次调用。</string>
+    <string name="owm_key_link">您可以在此处使用电子邮件地址免费注册：<b>https://home.openweathermap.org/users/sign_up</b></string>
+    <string name="insert_correct_owm_key">请插入有效的 OWM API 密钥。应为 32 个字符。</string>
+    <string name="tutorial_key_link_heading">OWM API 密钥</string>
+    <string name="tutorial_owm_key">请考虑在</string>
+    <string name="tutorial_owm_link"><a href="https://home.openweathermap.org/users/sign_up">OpenWeatherMaps（我们的数据提供商）</a></string>
+    <string name="tutorial_owm_2nd_half">使用您的个人密钥，请求的数量不会在用户之间分配。请在此处插入您的个人密钥。</string>
+    <string name="set_key">设置密钥</string>
+    <string name="abort">中止</string>
+    <string name="please_insert_your_personal_key_here_you_can_always_manage_it_in_the_settings">请在此处插入您的个人密钥。您可以在设置中随时管理它。</string>
+    <string name="do_you_really_want_to_continue_with_the_shared_api_key_weather_requests_are_limited_and_will_be_shared_with_other_users_with_a_personal_key_you_can_update_up_to_1000_times_a_day">您真的想继续使用共享的 API 密钥吗？天气请求有限并且将与其他用户共享。使用个人密钥，您可以每天更新多达 1000 次。</string>
+    <string name="use_shared">使用共享</string>
+    <string name="use_personal">使用个人</string>
+    <string name="no_forecast_warning">没有可用的预报，时间可能不准确。</string>
+    <string name="one_call_limit">遗憾的是，使用共享密钥每天只能进行 20 次 OneCallAPI 请求。</string>
+    <string name="api_key_not_accepted">API 密钥未被接受。如果您新创建了密钥，可能需要几分钟到几个小时才能注册。</string>
+    <string name="no_rain_data">没有可用的降雨数据</string>
+    <string name="settings_title_speed">速度</string>
+    <string name="settings_summary_speed">设置用于显示速度的单位</string>
+    <string name="rain60min_text2" translatable="false">9:05</string>
+    <string name="onedaywidgetchoice">为一天的预报小部件设置附加值。</string>
+    <string name="onedaywidget">日间变化小部件</string>
+    <string name="_6_am">上午 6 点</string>
+    <string name="_10am">上午 10 点</string>
+    <string name="_2pm">下午 2 点</string>
+    <string name="_6pm">下午 6 点</string>
+    <string name="_10pm">晚上 10 点</string>
+    <string name="theme_setting_summary">选择您喜欢的主题</string>
+    <string name="theme_setting_title">主题</string>
+    <string name="help_permission_wakelock_heading">权限：保持手机唤醒</string>
+    <string name="help_permission_bindservice_heading">权限：绑定到作业服务</string>
+    <string name="help_permission_wakelock_description">为了启用异步更新请求并保持应用程序响应，Wakelock 权限是必需的。天气中的后台任务不会很长时间，也不会使您的手机长时间保持唤醒状态。但需要此权限以这种方式运行后台服务。</string>
+    <string name="help_permission_bindservice_description">天气应用程序启用与我们的隐私友好备份应用程序的备份。为了启用此功能，需要绑定服务的权限。</string>
+    <string name="owm_url" translatable="false"><a href="https://openweathermap.org">OpenWeatherMap.org</a></string>
+    <string name="owm_about">天气数据提供者：</string>
+    <string name="owm_logo_copyright">“OpenWeatherMap 标志在\n<a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">Creative Commons BY-SA 许可下获得授权。</a></string>
+</resources>
+
+
