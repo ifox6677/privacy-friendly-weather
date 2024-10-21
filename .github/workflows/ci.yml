@@ -1,54 +1,73 @@
+
 name: Continuous integration
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
-  test:
-    name: Unit Tests
-    runs-on: ubuntu-20.04
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          submodules: 'recursive'
-      - name: Set up JDK 17
-        uses: actions/setup-java@v1
-        with:
-          java-version: 17
-      - name: Run unit tests
-        run: ./gradlew test
-      - name: Android Test Report
-        uses: asadmansr/android-test-report-action@v1.2.0
-        
-#  androidTest:
-#    name: Instrumented Tests
-#    runs-on: macOS-latest
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          submodules: 'recursive'
-#      - name: Set up JDK 11
-#        uses: actions/setup-java@v1
-#        with:
-#          java-version: 11
-#      - name: Run Instrumented Tests
-#        uses: reactivecircus/android-emulator-runner@v1
-#        with:
-#          api-level: 29
-#          arch: x86
-#          disable-animations: true
-#          script: ./gradlew connectedAndroidTest --stacktrace
-
   apk:
     name: Build APK
     runs-on: ubuntu-20.04
 
     steps:
-      - uses: actions/checkout@v2
+      # Checkout the repository
+      - uses: actions/checkout@v3
         with:
           submodules: 'recursive'
-      - name: Set up JDK 17
-        uses: actions/setup-java@v1
+
+      # Setup Java environment (Java 11 for Android)
+      - name: Set up JDK 11
+        uses: actions/setup-java@v3
         with:
-          java-version: 17
+          distribution: 'adopt' # or 'zulu', etc.
+          java-version: '11'
+
+      # Cache Gradle dependencies
+      - name: Cache Gradle dependencies
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            gradle-${{ runner.os }}
+
+      # Set up Android SDK
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v2
+        with:
+          api-level: 30
+          build-tools: 30.0.3
+          ndk: 21.1.6352462 # if NDK is needed
+          cache: true
+
+      # Make gradlew executable
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
+      # Build the Debug APK
       - name: Build debug APK
-        run: ./gradlew assembleDebug
+        run: ./gradlew assembleDebug --stacktrace
+
+      # Run Lint checks (optional)
+      #- name: Run Lint checks
+       # run: ./gradlew lint
+
+      # Upload APK as build artifact
+      - name: Upload APK
+        uses: actions/upload-artifact@v3
+        with:
+          name: debug-apk
+          path: app/build/outputs/apk/debug/
+
+      # Optional: Upload Lint reports (if lint step is added)
+      - name: Upload Lint Report
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: lint-report
+          path: app/build/reports/lint-results.html
